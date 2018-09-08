@@ -1,0 +1,20 @@
+# Logs and Caches
+npm-debug.log
+.npm
+
+# Dependency directories
+node_modules
+
+# Production build
+build
+
+# environment variables
+.env
+
+# IDE specific files
+.idea
+.vs
+.vscode
+
+# OS
+.DS_Store

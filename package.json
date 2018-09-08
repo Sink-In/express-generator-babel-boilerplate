@@ -1,0 +1,64 @@
+{
+  "name": "express-generator-babel-boilerplate",
+  "description": "express generator boilerplate with Babel, ESLint Airbnb, SASS and Twig support.",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "npm run clean && mkdir build && babel src -s -D -d build",
+    "dev": "nodemon ./src/bin/index.js --exec \"node -r dotenv/config -r babel-register\"",
+    "clean": "rimraf build",
+    "start": "npm run dev"
+  },
+  "keywords": [
+    "express",
+    "babel",
+    "boilerplate",
+    "scaffold",
+    "es6",
+    "es2015",
+    "es2016",
+    "es2017",
+    "eslint"
+  ],
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.3",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0",
+    "node-sass-middleware": "~0.11.0",
+    "rimraf": "^2.6.2",
+    "twig": "~0.10.3"
+  },
+  "devDependencies": {
+    "babel-eslint": "^9.0.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "dotenv": "^6.0.0",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.0",
+    "eslint-watch": "^4.0.2",
+    "nodemon": "^1.18.4"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ],
+    "plugins": [
+      "transform-object-rest-spread",
+      "transform-class-properties"
+    ]
+  }
+}
